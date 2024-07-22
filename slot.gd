@@ -1,6 +1,9 @@
+class_name Slot
 extends PanelContainer
 
 @onready var texture_rect = $TextureRect
+
+@export_enum("NONE:0", "HEAD:1", "BODY:2", "LEG:3", "ACTIVE:4") var slot_type: int
 
 
 func _get_drag_data(at_position):
