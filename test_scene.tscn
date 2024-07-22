@@ -23,6 +23,7 @@ layout_mode = 2
 
 [node name="TextureRect" parent="UI/Inventory/slot" index="0"]
 texture = SubResource("PlaceholderTexture2D_74oxr")
+ATK = 2
 
 [node name="slot2" parent="UI/Inventory" instance=ExtResource("1_62tsn")]
 layout_mode = 2

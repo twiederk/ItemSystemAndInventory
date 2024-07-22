@@ -13,9 +13,9 @@ func _can_drop_data(at_position, data):
 
 
 func _drop_data(at_position, data):
-	var temp = texture_rect.texture
-	texture_rect.texture = data.texture
-	data.texture = temp
+	var temp = texture_rect.property
+	texture_rect.property = data.property
+	data.property = temp
 
 
 func get_preview():
