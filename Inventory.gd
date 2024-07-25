@@ -1,13 +1,6 @@
 extends GridContainer
 
 
-func _ready():
-	add_item("0")
-	add_item("1")
-	add_item("2")
-	add_item("3")
-
-
 func add_item(ID = "0"):
 	var item_texture = load("res://assets/" + ItemData.get_texture(ID))
 	var item_slot_type = ItemData.get_slot_type(ID)
