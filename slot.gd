@@ -32,3 +32,6 @@ func get_preview():
 	preview.add_child(preview_texture)
 
 	return preview
+	
+func get_ATK():
+	return texture_rect.ATK
