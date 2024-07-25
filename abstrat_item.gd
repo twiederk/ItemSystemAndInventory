@@ -4,7 +4,7 @@ extends Sprite2D
  
 
 func _ready():
-	texture = load("res://assets/curated/" + ItemData.get_texture(ID))
+	texture = load("res://assets/" + ItemData.get_texture(ID))
 
 
 func _on_body_entered(body):
