@@ -10,19 +10,22 @@
 [ext_resource type="PackedScene" uid="uid://dy4d8peblaxud" path="res://abstrat_item.tscn" id="7_os174"]
 
 [node name="TestScene" type="Node2D"]
-position = Vector2(129, 34)
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 35.0
+offset_top = 9.0
+offset_right = 35.0
+offset_bottom = 9.0
 script = ExtResource("1_cadtd")
 
 [node name="Inventory" type="GridContainer" parent="UI"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 158.0
+offset_top = 15.0
+offset_right = 330.0
+offset_bottom = 143.0
 columns = 4
 script = ExtResource("1_53w7k")
 
@@ -64,8 +67,10 @@ layout_mode = 2
 
 [node name="Character" type="Control" parent="UI"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 108.0
+offset_top = 18.0
+offset_right = 148.0
+offset_bottom = 58.0
 script = ExtResource("2_vbphl")
 
 [node name="PassiveSlot" parent="UI/Character" instance=ExtResource("2_nehys")]
@@ -109,23 +114,23 @@ offset_right = -83.0
 offset_bottom = -1.0
 
 [node name="player" parent="." instance=ExtResource("6_of1u5")]
-position = Vector2(109, 175)
+position = Vector2(247, 191)
 
 [node name="AbstractItem" parent="." instance=ExtResource("7_os174")]
-position = Vector2(10, 230)
+position = Vector2(148, 246)
 
 [node name="AbstractItem2" parent="." instance=ExtResource("7_os174")]
-position = Vector2(-51, 185)
+position = Vector2(87, 201)
 ID = "4"
 
 [node name="AbstractItem3" parent="." instance=ExtResource("7_os174")]
-position = Vector2(179, 247)
+position = Vector2(317, 263)
 ID = "3"
 
 [node name="AbstractItem4" parent="." instance=ExtResource("7_os174")]
-position = Vector2(235, 231)
+position = Vector2(373, 247)
 ID = "2"
 
 [node name="AbstractItem5" parent="." instance=ExtResource("7_os174")]
-position = Vector2(91, 247)
+position = Vector2(229, 263)
 ID = "1"
