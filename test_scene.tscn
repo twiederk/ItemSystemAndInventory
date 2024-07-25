@@ -1,14 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://mjo6yj8aeq3n"]
+[gd_scene load_steps=5 format=3 uid="uid://mjo6yj8aeq3n"]
 
+[ext_resource type="Script" path="res://Inventory.gd" id="1_53w7k"]
 [ext_resource type="PackedScene" uid="uid://dsqbijpge5day" path="res://slot.tscn" id="1_62tsn"]
 [ext_resource type="PackedScene" uid="uid://3o5vas75u07g" path="res://passive_slot.tscn" id="2_nehys"]
 [ext_resource type="Script" path="res://Character.gd" id="2_vbphl"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tdhx2"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_w3fbf"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bp6ed"]
 
 [node name="TestScene" type="Node2D"]
 position = Vector2(129, 34)
@@ -24,30 +19,16 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 columns = 4
+script = ExtResource("1_53w7k")
 
 [node name="slot1" parent="UI/Inventory" instance=ExtResource("1_62tsn")]
 layout_mode = 2
 
-[node name="TextureRect" parent="UI/Inventory/slot1" index="0"]
-texture = SubResource("PlaceholderTexture2D_tdhx2")
-slot_type = 1
-ATK = 2
-
 [node name="slot2" parent="UI/Inventory" instance=ExtResource("1_62tsn")]
 layout_mode = 2
 
-[node name="TextureRect" parent="UI/Inventory/slot2" index="0"]
-texture = SubResource("PlaceholderTexture2D_w3fbf")
-slot_type = 2
-ATK = 3
-
 [node name="slot3" parent="UI/Inventory" instance=ExtResource("1_62tsn")]
 layout_mode = 2
-
-[node name="TextureRect" parent="UI/Inventory/slot3" index="0"]
-texture = SubResource("PlaceholderTexture2D_bp6ed")
-slot_type = 3
-ATK = 4
 
 [node name="slot4" parent="UI/Inventory" instance=ExtResource("1_62tsn")]
 layout_mode = 2
@@ -113,7 +94,3 @@ offset_left = -123.0
 offset_top = -24.0
 offset_right = -83.0
 offset_bottom = -1.0
-
-[editable path="UI/Inventory/slot1"]
-[editable path="UI/Inventory/slot2"]
-[editable path="UI/Inventory/slot3"]

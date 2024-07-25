@@ -5,6 +5,8 @@ extends PanelContainer
 
 @export_enum("NONE:0", "HEAD:1", "BODY:2", "LEG:3", "ACTIVE:4") var slot_type: int
 
+var filled: bool = false
+
 
 func _get_drag_data(at_position):
 	set_drag_preview(get_preview())
@@ -32,6 +34,16 @@ func get_preview():
 	preview.add_child(preview_texture)
 
 	return preview
-	
+
+
 func get_ATK():
 	return texture_rect.ATK
+	
+	
+func set_property(data):
+	texture_rect.property = data
+	
+	if data["TEXTURE"] == null:
+		filled = false
+	else:
+		filled = true
