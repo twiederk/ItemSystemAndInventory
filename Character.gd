@@ -10,4 +10,5 @@ func calculate():
 	for i in get_children():
 		sum += i.get_ATK()
 		
-	atk.text = str(sum);
+	atk.text = str(sum)
+	owner.find_child("player").ATK = sum
