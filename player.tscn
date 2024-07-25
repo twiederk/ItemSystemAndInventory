@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dq1pqh7ofri5r"]
+[gd_scene load_steps=5 format=3 uid="uid://dq1pqh7ofri5r"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_07yic"]
+[ext_resource type="PackedScene" uid="uid://c5cvooyxc34g" path="res://bullet.tscn" id="2_owfmc"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8a2uv"]
 size = Vector2(20, 20)
@@ -9,9 +10,14 @@ size = Vector2(20, 20)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_07yic")
+bullet_node = ExtResource("2_owfmc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("PlaceholderTexture2D_8a2uv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_u8adg")
+
+[node name="Speed" type="Timer" parent="."]
+
+[connection signal="timeout" from="Speed" to="." method="_on_speed_timeout"]
